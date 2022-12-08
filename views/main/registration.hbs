@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet"href="style.css">
+    <link rel="stylesheet"href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body{
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-image:linear-gradient(rgba(0, 0, 0, 0.8), rgba(17, 15, 15, 0.5)), url('/images/regbg.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.container{
+    background-color: #fff;
+    position: relative;
+    width: 70%;
+    max-width: 800px;
+    border-radius: 6px;
+    padding: 30px;
+    margin: 0 15px;
+    box-shadow: 0 5px 10px rgba(0,0,0,0.1);
+
+}
+.container header{
+    position: relative;
+    font-size: 20px;
+    font-weight: 600;
+    color: #333;
+    border-radius: 8px;
+    margin-bottom: 5px;
+}
+.container form{
+    margin-top: 16px;
+    position: relative;
+    min-height: 500px;
+    background-color: #fff;
+   
+}
+.container header::before{
+    content: "";
+    left: 0;
+    position: absolute;
+    bottom: -2px;
+    height: 3px;
+    width: 27px;
+    background-color: #4070f4;
+}
+.container form .details{
+    margin-top: 10px;
+    color: #333;
+    font-weight: 600;
+}
+.container form .fields{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    
+}
+form .fields .input-field{
+    display: flex;
+    width: calc(100% / 2 - 15px);
+    flex-direction: column;
+    margin: 4px, 0;
+    flex-wrap: wrap;
+    margin-top: 15px;
+}
+.input-field label{
+    font-size: 15px;
+    font-weight: 500;
+    color: #2e2e2e;
+}
+
+.input-field input{
+    padding: 0 15px;
+    outline: none;
+    border: 1px solid #aaa;
+    border-radius: 5px;
+    font-size: 14px;
+    font-weight: 400;
+    color: #333;
+    height: 42px;
+    margin: 8px 0;
+}
+.input-field input:is(:focus, :valid){
+    box-shadow: 0 3px 6px rgba(0,0,0,0.13);
+}
+.input-field input[type="date"]{
+    color: #707070;
+}
+.input-field input[type="date"]:valid{
+    color: #333;
+}
+span.title{
+    font-weight: 600;
+    color: #333;
+}
+.Account{
+    margin-top: 5px;
+}
+.Register{
+    background-color: #7697f1;
+    padding: 0.3rem;
+    border-radius: 8px;
+    margin-left: 45%;
+    margin-top: 5%;
+    width:auto;
+
+    
+}
+form button:hover{
+    background-color:navy;
+    color: whitesmoke;
+}
+
+@media(max-width: 750px){
+    .container form{
+        overflow-y: scroll;
+    }
+    .container form::-webkit-scrollbar{
+        display: none;
+    }
+    form .fields .input-field{
+        width: calc(100% / 2 - 15px);
+        /*display: flex;
+        
+        flex-direction: column;
+        margin: 4px, 0;
+        flex-wrap: wrap;
+        margin-top: 15px;*/
+    }
+
+}
+
+@media (max-width: 550px){
+    form .fields .input-field{
+        width:100%;
+    }
+}
+
+
+
+
+    </style>
+    <title>Registration Form</title>
+</head>
+<body>
+    <div class="container">
+        <header>Registration</header>
+
+        <form action="/registration" onsubmit="return myfun()" method="POST">
+            <div class="form first">
+                <div class="details personal">
+                    <span class="title">Presonal Details</span>
+                    <div class="fields">
+                        <div class="input-field">
+                            <label>Full Name</label>
+                            <input type="text" name="name" placeholder="Enter your name" required>
+                        </div>
+
+                        <div class="input-field">
+                            <label>Birth Date</label>
+                            <input type="date" name="birthdate" placeholder="Enter Birthdate" required>
+                        </div>
+                         <div class="input-field">
+                            <label>Gender</label>
+                            <input type="text" name="gender" placeholder="Enter your Gender" required>
+                        </div>
+
+                        <div class="input-field">
+                            <label>Age</label>
+                            <input type="number" name="Age" placeholder="Enter your Age" required>
+                        </div>
+
+                        <div class="input-field">
+                            <label>Mobile Number</label>
+                            <input type="number" name="phone" placeholder="Enter mobile number" id="number"required >
+                            <span id="mn"></span>
+                        </div>
+
+                        <div class="input-field">
+                            <label>Occupation</label>
+                            <input type="text" name="Occupation" placeholder="Enter your Occupation" required>
+                        </div>
+
+
+                    </div>
+                </div>
+
+                <div class="Account">
+                    <span class="title">Setting up Account</span>
+                    <div class="fields">
+                           <div class="input-field">
+                            <label>Email</label>
+                            <input type="email" id="email" name="email" placeholder="Enter your email" value="" required>
+                            <span id="mail" class="text-danger font-weight-bold"></span>
+                        </div>
+
+                        <div class="input-field">
+                            <label>Username</label>
+                            <input type="text" id="username" name="username" placeholder="Enter username" required>
+                            <span id="user" class="text-danger font-weight-bold"></span>
+                        </div>
+
+                        <div class="input-field">
+                            <label>Password</label>
+                            <input type="password" id="password" name="password" placeholder="Enter your password" required>
+                            <span id="pass" class="text-danger font-weight-bold"></span>
+                        </div>
+
+                        <div class="input-field">
+                            <label>Confirm Password</label>
+                            <input type="password" id="cp" name="confirmpassword" placeholder="Confirm the password" required>
+                            <span id="conpass" class="text-danger font-weight-bold"></span>
+                        </div>
+                           </div>
+                    <button class="Register" type="submit" value="submit">
+                        <span class="btnText">Register</span>
+                    </button>
+                    
+                </div>
+            </div>
+        </form>
+    </div>
+    {{!-- <script defer src="script.js"></script> --}}
+</body>
+</html>

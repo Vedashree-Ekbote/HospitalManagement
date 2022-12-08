@@ -1,0 +1,456 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+  <link rel="stylesheet" href="css/Everyonepage.css" />
+
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha512-SfTiTlX6kk+qitfevl/7LibUOeJWlt9rbyDn92a1DqWOw9vWG2MFoays0sgObmWazO5BQPiFucnnEAjpAB+/Sw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <title>Hopital Management</title>
+</head>
+<style>
+  *{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+    font-family: 'Poppins',sans-serif;
+}
+.navbar{
+    font-size: 19px;
+    
+}
+.nav-item a{
+    color: black !important;
+}
+.nav-link:hover{
+    color: red !important;
+}
+.btn{
+    margin-left: 10px;
+}
+.size {
+    height: 600px;
+}
+.header{
+    text-align: center;
+    color:rgb(20, 58, 102);
+    font-weight:bold;
+    font-size: 30px;
+    
+}
+.header-down{
+    color: grey;
+    text-align: center;
+}
+.header-extradiv{
+    width: 100%;
+    height: auto;
+    margin: 100px 0;
+    text-align: center;
+}
+.extra-div{
+    background: #fff;
+    border: medium none;
+    padding: 50px!important;
+    border-radius: 3px;
+}
+.extra-div h2, .servicediv h2{
+    font-size:  0.9rem;
+    margin: 20px 0 15px 0;
+    font-weight: bold;
+    line-height: 1.1;
+    word-spacing: 4px
+}
+.ourdr-extradiv{
+    width: 100%;
+    margin-left: 160px !important;
+    height: auto;
+    margin: 100px 0;
+    text-align: center;
+}
+.ourdr{
+    border: medium none;
+    padding: 50px!important;
+    border-radius: 3px;
+    transition: 0.3s;
+}
+.ourdr:hover{
+    box-shadow:  0 0 30px -1 rgba(0,0,0,0.3);
+    transform:translateY(-20px);
+}
+.testmonials{
+    font-size: 30px;
+    font-weight: bold !important;
+    color:rgb(20, 58, 102);
+    text-align: center;
+    padding-bottom: 40px;
+}
+.test{
+    text-align: center;
+}
+.serviceconnt{
+    background-color:rgb(242, 242, 242) !important;
+}
+
+.services{
+    line-height: 90px;
+    margin-top: 15%;
+    font-size: 30px;
+    font-weight: bold;
+    color:rgb(20, 58, 102);
+    margin-bottom: 9%;
+}
+</style>
+<body>
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <div class="container">
+    <a class="navbar-brand font-weight-bold text-uppercase" href="#">Hospital</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavDropdown">
+          <ul class="navbar-nav ml-auto text-uppercase">
+            <li class="nav-item active">
+              <a class="nav-link" href="#about">About <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#facilities">Facilities</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#doctors">Doctors</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#services">Services</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Contact</a>
+            </li>
+            <li class="nav-item">
+            <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
+                Login
+              </button>
+              
+              <!-- Modal -->
+              <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered" role="document">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <h5 class="modal-title text-danger" id="exampleModalLabel">We dont know you</h5>
+                      <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                      </button>
+                    </div>
+                    <div class="modal-body">
+                      <a class="btn btn-success text-center" class="button1" href="/login">User Login</a><br><br>
+                      <a class="btn btn-success text-center" class="button1" href="/drlogin">Doctor Login</a><br><br>
+                      <a class="btn btn-success" href="/registration" class="button1">Registration</a>
+                    </div>
+                    
+                  </div>
+                </div>
+              </div>
+            
+            </li>
+        </ul>
+        </div>
+    </div>
+  </nav>
+  
+
+  <!-- slider -->
+  <div class="container-fluid">
+    <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+      <ol class="carousel-indicators">
+        <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+        <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+        <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+      </ol>
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <img class="size d-block w-100" src="../images/doctor.jpeg" alt="First slide" />
+        </div>
+        <div class="carousel-item">
+          <img class="size d-block w-100" src="../images/doctor2.jpg" alt="Second slide" />
+        </div>
+        <div class="carousel-item">
+          <img class="size d-block w-100" src="../images/doctor3.png" alt="Third slide" />
+        </div>
+      </div>
+      <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="sr-only">Previous</span>
+      </a>
+      <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="sr-only">Next</span>
+      </a>
+    </div>
+  </div>
+  <br />
+  <!-- grid for best hospital in pune -->
+  <br /><br />
+  <div class="header" id="about">BEST HOSPITAL IN TOWN</div>
+  <div class="header-down"><small>When It Comes to Health Care</small></div>
+  <br /><br />
+  <section class="header-extrdiv">
+    <div class="container">
+      <div class="row">
+        <div class="extra-div col-lg-4 col-md-4 col-12">
+          <a href="#"><i class="fa-3x fa fa-desktop" aria-hidden="true"></i></a>
+          <h2>Choose Us</h2>
+          <p>
+            for outstanding care and family-like atmosphere, together with advanced medical technology 
+          </p>
+        </div>
+        <div class="extra-div col-lg-4 col-md-4 col-12">
+          <a href="#"><i class="fa-3x fa fa-desktop" aria-hidden="true"></i></a>
+          <h2>certifications</h2>
+          <p>
+            All our clinicians are board-certified and come with very high credentials within their field of speciality
+          </p>
+        </div>
+        <div class="extra-div col-lg-4 col-md-4 col-12">
+          <a href="#"><i class="fa-3x fa fa-desktop" aria-hidden="true"></i></i></a>
+          <h2>Facilities</h2>
+          <p>
+            Ensures we attract leading consultants and specialists from the industry to work with us
+          </p>
+        </div>
+      </div>
+      <div class="row">
+        <div class="extra-div col-lg-4 col-md-4 col-12">
+          <a href="#"><i class="fa-3x fa fa-desktop" aria-hidden="true"></i></a>
+          <h2>Doctors</h2>
+          <p>
+             our consultant doctors are internationally recognised as well
+          </p>
+        </div>
+        <div class="extra-div col-lg-4 col-md-4 col-12">
+          <a href="#"><i class="fa-3x fa fa-desktop" aria-hidden="true"></i></a>
+          <h2>Staff</h2>
+          <p>
+            All our nurses are fully qualified and registered with the Nursing Council.
+          </p>
+        </div>
+        <div class="extra-div col-lg-4 col-md-4 col-12">
+          <a href="#"><i class="fa-3x fa fa-desktop" aria-hidden="true"></i></a>
+          <h2>Treatment</h2>
+          <p>
+           we are committed to providing our patients with advanced medical and surgical treatments 
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+  <br><br>
+   <!-- our doctors  -->
+<div class="serviceconnt">
+  <div class="header" id="doctors">Our Doctors<br>
+    <div class="header-down"><small>Our doctors are specialized in their field and have more than 10 years of experiences.</small></div>
+  </div>
+  <div class="container ourdr-extradiv">
+    <div class="row">
+      <div class="col-lg-3 col-md-3 col-12 ourdr">
+        <div class="card" style="width: 15rem;">
+          <img class="card-img-top" src="images/d1.jfif" alt="Card image cap">
+          <div class="card-body">
+            <p class="card-text">Dr. Maria Lentzou With expertise in internal health, she provides diagnostics and treatment for adults in the area. </p>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-3 col-md-3 col-12 ourdr">
+        <div class="card" style="width: 15rem;">
+          <img class="card-img-top" src="images/d2.jfif" alt="Card image cap">
+          <div class="card-body">
+            <p class="card-text">Dr.McQuillan is a board-certified family physician through the American Board of Family Medicine.</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-3 col-md-3 col-12 ourdr">
+        <div class="card" style="width: 15rem;">
+          <img class="card-img-top" src="images/d3.jfif" alt="Card image cap">
+          <div class="card-body">
+            <p class="card-text">Dr. Olufunke Ajifolokun, DNP, FNP-BC is a certified Family Nurse Practitioner by American Nurses Credentialing Center. </p>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-3 col-md-3 col-12 ourdr">
+        <div class="card" style="width: 15rem;">
+          <img class="card-img-top" src="images/d4.jfif" alt="Card image cap">
+          <div class="card-body">
+            <p class="card-text">Dr.Ryan is graduated from university of Chicago. She treats patients of all ages, including children, adolescents, and adults.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+  <div class="container test">
+      <div class="testmonials text-uppercase">Testimonials<br></div><br>
+      <ul class="nav-tabs nav nav-justified">
+        <li class="nav-item">
+          <a class="nav-link active" href="#first" data-toggle="tab">active</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#second" data-toggle="tab">Link</a>
+        </li>
+      </ul>
+      <br><br>
+      <div class="tab-content container">
+        <div class="tab-pane active" id="first">
+          <blockquote class="blockquote mb-0">
+            <p>The doctors and nurses and aides were super duper helpful. I really really appreciate all your kindness and good care you have provide me with. Thank you so much!</p>
+            <footer class="blockquote-footer"><cite title="Source Title">Martha Stewart</cite></footer>
+          </blockquote> 
+        </div>
+        <div class="tab-pane" id="second">
+          <blockquote class="blockquote mb-0">
+            <p>All the hospital staffs were very helpful. I really really appreciate all your kindness and good care you have provide me with. Thank you so much for your dedication!
+             </p>
+            <footer class="blockquote-footer"><cite title="Source Title"> Rachel Williams</cite></footer>
+          </blockquote> 
+        </div>
+      </div>
+
+    </div>
+
+<div class="serviceconnt">
+    <div class="container text-center">
+      <div class="services text-uppercase" id="services">Our Services</div>
+      <div class="row">
+        <div class="col-lg-3 col-md-3 col-12 ourdr">
+          <div class="card" style="width: 15rem;">
+            <img class="card-img-top" src="images/xray.jfif" alt="Card image cap">
+            <div class="card-body">
+              <p class="card-text">X-ray/radiology services</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-3 col-md-3 col-12 ourdr">
+          <div class="card" style="width: 15rem;">
+            <img class="card-img-top" src="images/surgery.jpg" alt="Card image cap">
+            <div class="card-body">
+              <p class="card-text">General and specialty surgical services</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-3 col-md-3 col-12 ourdr">
+          <div class="card" style="width: 15rem;">
+            <img class="card-img-top" src="images/h3.jfif" alt="Card image cap">
+            <div class="card-body">
+              <p class="card-text">Short-term hospitalization</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-3 col-md-3 col-12 ourdr">
+          <div class="card" style="width: 15rem;">
+            <img class="card-img-top" src="images/icu.jfif" alt="Card image cap">
+            <div class="card-body">
+              <p class="card-text">Emergency room services</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="container text-center">
+    <div class="services text-uppercase" id="facilities">Our facilities</div>
+    <div class="row">
+      <div class="col-lg-3 col-md-3 col-12 ourdr">
+        <div class="card" style="width: 15rem;">
+          <img class="card-img-top" src="images/pharmacy.jpg" alt="Card image cap">
+          <div class="card-body">
+            <p class="card-text">24X7 Pharmacy.</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-3 col-md-3 col-12 ourdr">
+        <div class="card" style="width: 15rem;">
+          <img class="card-img-top" src="images/daycare.jfif" alt="Card image cap">
+          <div class="card-body">
+            <p class="card-text">Day care Services.</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-3 col-md-3 col-12 ourdr">
+        <div class="card" style="width: 15rem;">
+          <img class="card-img-top" src="images/ambulance.jfif" alt="Card image cap">
+          <div class="card-body">
+            <p class="card-text">24X7 Ambulance.</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-3 col-md-3 col-12 ourdr">
+        <div class="card" style="width: 15rem;">
+          <img class="card-img-top" src="images/checkup.jfif" alt="Card image cap">
+          <div class="card-body">
+            <p class="card-text">Health Checkups</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    {{!-- <div class="row">
+      <div class="col-lg-3 col-md-3 col-12 ourdr">
+        <div class="card" style="width: 15rem;">
+          <img class="card-img-top" src="images/dr2.jpeg" alt="Card image cap">
+          <div class="card-body">
+            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
+              content.</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-3 col-md-3 col-12 ourdr">
+        <div class="card" style="width: 15rem;">
+          <img class="card-img-top" src="images/dr2.jpeg" alt="Card image cap">
+          <div class="card-body">
+            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
+              content.</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-3 col-md-3 col-12 ourdr">
+        <div class="card" style="width: 15rem;">
+          <img class="card-img-top" src="images/dr2.jpeg" alt="Card image cap">
+          <div class="card-body">
+            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
+              content.</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-3 col-md-3 col-12 ourdr">
+        <div class="card" style="width: 15rem;">
+          <img class="card-img-top" src="images/dr2.jpeg" alt="Card image cap">
+          <div class="card-body">
+            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
+              content.</p>
+          </div>
+        </div>
+      </div>
+    </div> --}}
+
+  </div>
+  
+ <br><br><br><br>
+  <!-- Optional JavaScript -->
+  <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+  
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+    integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js"
+    integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js"
+    integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+    crossorigin="anonymous"></script>
+</body>
+
+</html>

@@ -1,0 +1,227 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link rel="stylesheet" href="time.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    integrity="sha512-SfTiTlX6kk+qitfevl/7LibUOeJWlt9rbyDn92a1DqWOw9vWG2MFoays0sgObmWazO5BQPiFucnnEAjpAB+/Sw=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
+    integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+  <title>Appointment</title>
+  <style>
+    *{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+    font-family: 'Poppins',sans-serif;
+}
+.navbar{
+    font-size: 19px;
+    background-image: linear-gradient(to bottom, rgba(49, 49, 207, 0.856) , rgba(125, 165, 222, 0.989)) !important;
+}
+.brandcolor{
+    font-size: 30px !important;
+    font-weight: 100px !important;
+    color:white!important;
+}
+.nav-item a{
+    color: black !important;
+}
+.nav-link:hover{
+    color: red !important;
+}
+.menu{
+    width: auto;
+    height: auto;
+    background-color:rgba(125, 165, 222, 0.989);
+    float:left;
+    margin-left: -14.7px;
+    padding-top: 50px;
+    padding-left: 40px;
+    padding-right: 40px;
+    padding-bottom: 50px;
+    text-align: center;
+    border-style: none;
+}
+
+aside li{
+    background-color: rgba(125, 165, 222, 0.989) !important;
+    line-height: 50px;
+    box-shadow: 0px 0px;
+}
+.card1{
+    margin-top: 40px;
+}
+.appt_header{
+    text-align: center;
+    color: rgb(50, 50, 194);
+    font-weight: 600;
+    padding: 70px;
+    font-size: 20px;
+}
+.formdisplay{
+    margin-top: 40px;
+    color: rgb(50, 50, 194);
+    font-size: 20px;
+    font-weight: 600;
+    text-align: center;
+}
+.formdisplay1{
+    visibility: hidden;
+}
+  </style>
+</head>
+
+<body>
+  <nav class="navbar navbar-expand-lg">
+    <div class="container">
+      <a class="navbar-brand text-uppercase brandcolor" href="#">Hospital</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown"
+        aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"><i class="fa fa-caret-down"></i></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNavDropdown">
+        <ul class="navbar-nav ml-auto text-uppercase">
+          <li class="nav-item active">
+            <a class="nav-link" href="#about">About <span class="sr-only">(current)</span></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Departments</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#doctors">Doctors</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#services">Services</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Contact</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  <div class="container-fluid">
+    <div class="row" style="margin-right: 39px;">
+      <div class="menu col-lg-3 col-md-3 col-12" id="Menu">
+        <aside>
+          <div class="fixed" id="MenuDropdown">
+            <ul class="list-group list-group-flush">
+              <li class="list-group-item ">Doctors</li>
+              <li class="list-group-item ">Section</li>
+              <li class="list-group-item ">abc</li>
+              <li class="list-group-item ">Porta ac consectetur ac</li>
+              <li class="list-group-item ">Vestibulum at eros</li>
+            </ul>
+          </div>
+
+        </aside>
+      </div>
+      <div class="col-lg-9 col-md-9 col-12">
+        <div class="container">
+          <div class="card1 card">
+            <div class="appt_header card-header">
+              Appointment Schedule
+            </div>
+            <div class="card-body">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th scope="col">#</th>
+                    <th scope="col">Time</th>
+                    <th scope="col">Book</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <th scope="row">1</th>
+                    <td>9:00 am- 10:00 am</td>
+                    <td><button id="times" onclick="formfunction()" value="9">Form</button></td>
+                  </tr>
+                  <tr>
+                    <th scope="row">2</th>
+                    <td>10:00- 11:00 am</td>
+                    
+                    <td><a href="#" id="time" onclick="formfunction()" value="10">Form</a></td>
+                  </tr>
+                  <tr>
+                    <th scope="row">3</th>
+                    <td time="time1112">11:00-12:00</td>
+                    
+                    <td><a href="#" id="time" onclick="formfunction()" value="11">Form</a></td>
+                  </tr>
+                  <tr>
+                    <th scope="row">4</th>
+                    <td id="time121">12:00-01:00</td>
+                    
+                    <td><a href="#" id="time" onclick="formfunction()" value="12">Form</a></td>
+                  </tr>
+                  
+                </tbody>
+              </table>
+              
+            </div>
+          </div>
+          <div id="formdata" class="formdisplay">
+              Form will display here
+          </div>
+          <div class="formdisplay1" id="formdisplay">
+            <form action="/time" method="POST">
+              <div class="form-group">
+                <label for="exampleInputEmail1">Time</label>
+                <input type="text" name="time" class="form-control" id="exampleInputEmail1" value="timeshow">
+                </div>
+              <div class="form-group">
+                <label for="exampleInputPassword1">ID</label>
+                <input type="password" name="pass" class="form-control" id="exampleInputPassword1" placeholder="Password">
+              </div>
+              {{!-- <div class="form-check">
+                <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                <label class="form-check-label" for="exampleCheck1">Check me out</label>
+              </div> --}}
+              <button type="submit" class="btn btn-primary">Submit</button>
+            </form>
+          </div>
+            
+        </div>
+      </div>
+    </div>
+  </div>
+  <script>
+    function call(){
+      
+      let times1 = document.getElementsByClassName("times").value;
+      document.getElementById("exampleInputEmail1").innerHTML = times1;
+    }
+    function formfunction(){
+      document.getElementById("formdata").innerHTML = document.getElementById("formdisplay").innerHTML;
+      call();
+    }
+    
+  </script>
+
+  
+
+  <!-- Optional JavaScript -->
+  <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+    integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js"
+    integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js"
+    integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+    crossorigin="anonymous"></script>
+</body>
+
+</html>

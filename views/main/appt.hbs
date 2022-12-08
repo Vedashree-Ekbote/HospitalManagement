@@ -1,0 +1,360 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    integrity="sha512-SfTiTlX6kk+qitfevl/7LibUOeJWlt9rbyDn92a1DqWOw9vWG2MFoays0sgObmWazO5BQPiFucnnEAjpAB+/Sw=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
+    integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+  <title>Appointment</title>
+  <style>
+    *{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+    font-family: 'Poppins',sans-serif;
+}
+.navbar{
+    font-size: 19px;
+    background-image: linear-gradient(to bottom, rgba(49, 49, 207, 0.856) , rgba(125, 165, 222, 0.989)) !important;
+}
+.brandcolor{
+    font-size: 30px !important;
+    font-weight: 100px !important;
+    color:white!important;
+}
+.nav-item a{
+    color: black !important;
+}
+.nav-link:hover{
+    color: red !important;
+}
+.appt_header{
+    line-height:100px;
+    margin-bottom: 40px;
+    text-align: center;
+    font-size: 40px;
+    font-weight: 300;
+    color: rgb(50, 50, 194);
+}
+
+.menu{
+    width: auto;
+    height: auto;
+    background-color:rgba(125, 165, 222, 0.989);
+    float:left;
+    margin-left: -14.7px;
+    padding-top: 50px;
+    padding-left: 40px;
+    padding-right: 40px;
+    padding-bottom: 50px;
+    text-align: center;
+    border-style: none;
+}
+
+aside li{
+    background-color: rgba(125, 165, 222, 0.989) !important;
+    line-height: 50px;
+    box-shadow: 0px 0px;
+}
+.navitem{
+    height: 30px;
+    margin-bottom: 5%;
+    font-size: 20px;
+    font-weight: 300px;
+}
+.navitem a{
+    padding-right: 40%;
+}
+.header{
+    text-align: center;
+    color:rgb(20, 58, 102);
+    font-weight:bold;
+    font-size: 30px;
+    
+}
+.header-down{
+    color: grey;
+    height: auto;
+    text-align: center;
+}
+.ourdr-extradiv{
+    width: 100%;
+    height: auto;
+    margin: 100px 0;
+    text-align: center;
+}
+.ourdr{
+    border: medium none;
+    padding: 50px!important;
+    border-radius: 3px;
+    transition: 0.3s;
+}
+.ourdr:hover{
+    box-shadow:  0 0 30px -1 rgba(0,0,0,0.3);
+    transform:translateY(-20px);
+}
+/* form */
+.appt_form_submit{
+    font-size: 25px;
+    text-align: center;
+    color:rgb(20, 58, 102) !important;
+    font-weight: bold !important;
+    letter-spacing: 5px !important;
+}
+.appt_form_text{
+    font-weight: 700 !important;
+    font-size: 20px;
+}
+.appt_form_text button{
+    margin-left: 50%;
+    margin-right: 50%;
+}
+.appt_form_doctor{
+    font-size: 20px;
+    font-weight: 400;
+    text-align: center;
+    color:rgb(20, 58, 102);
+    margin-top: 5%;
+    padding-bottom: 5%;
+}
+.card_our_dr{
+    margin-right: 39px;
+}
+.serviceconnt{
+    background-color:rgb(242, 242, 242) !important;
+    margin-left: 9%;
+}
+.navs{
+    margin-left: 40%;
+    padding: 10px;
+    font-size: 20px;
+    font-weight: 300;
+}
+  </style>
+</head>
+
+<body>
+  <nav class="navbar navbar-expand-lg">
+    <div class="container">
+      <a class="navbar-brand text-uppercase brandcolor" href="#">Hospital</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown"
+        aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"><i class="fa fa-caret-down"></i></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNavDropdown">
+        <ul class="navbar-nav ml-auto text-uppercase">
+          <li class="nav-item active">
+            <a class="nav-link" href="#about">About <span class="sr-only">(current)</span></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Departments</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#doctors">Doctors</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#services">Services</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Contact</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  <div class="container-fluid">
+    <div class="row" style="margin-right: 39px;">
+      <div class="menu col-lg-3 col-md-3 col-3" id="Menu">
+        <aside>
+          <div class="fixed" id="MenuDropdown">
+            <ul class="list-group list-group-flush">
+              <a class="list-group-item" href="/user">Home</a>
+              <a class="list-group-item" href="/user">Doctors</a>
+              <a class="list-group-item" href="appointment">Cancel Appointment</a>
+            </ul>
+          </div>
+
+        </aside>
+      </div>
+      <div class="col-lg-9 col-md-9 col-9">
+        <div class="container">
+          <div class="appt_header text-uppercase">Appointment</div><br>
+          <nav>
+            <div class="navs nav nav-tabs" id="nav-tab" role="tablist">
+              <a class="nav-item nav-link active" id="nav-home-tab" data-toggle="tab" href="#nav-home" role="tab"
+                aria-controls="nav-home" aria-selected="true">Home</a>
+              <a class="nav-item nav-link" id="nav-profile-tab" data-toggle="tab" href="#nav-profile" role="tab"
+                aria-controls="nav-profile" aria-selected="false">Profile</a>
+            </div>
+          </nav>
+          <div class="tab-content" id="nav-tabContent">
+            <div class="tab-pane fade show active" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab">
+              <!-- form -->
+              <div class="card">
+                <div class="card-header text-uppercase">
+                  <div class="appt_form_submit">Appointment Form</div>
+                </div>
+                <div class="appt_form_text card-body">
+                  <form action="/appointment" method="POST" onsubmit="return apptsubmit()">
+                  <div class="form-group">
+                    <input type="hidden" name="_id" value="{{user._id}}">
+                  </div>
+                    <div class="form-group">
+                      <label for="exampleInputName1">Name of Patient:</label>
+                      <input type="text" name="name" class="form-control" id="exampleInputName1" placeholder="PATIENT NAME"
+                        required>
+                    </div>
+                    <div class="form-group">
+                      <label for="exampleInputAge1">Patient Age:</label>
+                      <input type="number" name="age" class="form-control" id="exampleInputAge1" placeholder="PATIENT AGE"
+                        required>
+                    </div>
+                    <div class="form-group">
+                      <label for="exampleInputNumber1">Mobile Number:</label>
+                      <input type="tel" name="mno"class="form-control" id="exampleInputNumber1" placeholder="Mobile Number"
+                        required>
+                    </div>
+                    <div class="form-group">
+                      <label for="exampleInputNumber1">Select Time:</label>
+                      <lable class="radio inline">
+                        <input name="dept" type="radio" value="Cardiologist"><span>Cardiologits</span>
+                        <input name="dept" type="radio" value="Orthologist"><span>Orthologhist</span>
+                        <input name="dept" type="radio" value="Psycologist"><span>Psycologist</span>
+                        <input name="dept" type="radio" value="Gynacologist"><span>Gynacologist</span>
+                      </lable>
+                      {{!-- <label for="exampleInputNumber1">Section:</label>
+                      <div class="input-group mb-3">
+                        <div class="input-group-prepend">
+                          <label class="input-group-text" for="inputGroupSelect01">Option:</label>
+                        </div>
+                        <select class="custom-select" id="inputGroupSelect01" required>
+                          <option selected>Choose...</option>
+                          <option name="dept" value="1">Cardiologist</option>
+                          <option name="dept" value="2">Orthologist</option>
+                          <option name="dept" value="3">Psycologist</option>
+                          <option name="dept" value="4">Gynacologist</option>
+                        </select>
+                      </div> --}}
+                    </div>
+                    <div class="form-group">
+                      <label for="exampleInputEmail1">Email:</label>
+                      <input type="email" name="email" class="form-control" id="exampleInputEmail1"
+                        placeholder="Email for receipt Generation" required>
+                    </div>
+                    <div class="form-group">
+                      <label for="exampleInputAddress1">Address:</label>
+                      <input type="text" name="address" class="form-control" id="exampleInputAddress1" placeholder="ADDRESS" required>
+                    </div>
+                    <div class="form-group">
+                      <label for="exampleInputNumber1">Select Time:</label>
+                      <lable class="radio inline">
+                        <input name="time" type="radio" value="9-10"><span>9-10</span>
+                        <input name="time" type="radio" value="10-11"><span>10-11</span>
+                        <input name="time" type="radio" value="11-12"><span>11-12</span>
+                        <input name="time" type="radio" value="12-1"><span>12-1</span>
+                      </lable>
+                      {{!-- 
+                      <div class="input-group mb-3">
+                        <div class="input-group-prepend">
+                          <label class="input-group-text" for="inputGroupSelect01">Option:</label>
+                        </div>
+                        <select class="custom-select" id="inputGroupSelect01" required>
+                          <option selected>Choose...</option>
+                          <option name="time" value="9-10">9-10</option>
+                          <option name="time" value="10-11">10-11</option>
+                          <option name="time" value="11-12">11-12</option>
+                          <option name="time" value="12-1">12-1</option>
+                        </select>
+                      </div> --}}
+                    </div>
+                    <button type="submit" class="appt_from_submit_btn btn btn-primary">Submit</button>
+                  </form>
+                </div>
+              </div>
+            </div>
+            <!-- form end -->
+
+            <div class="card_our_dr tab-pane fade" id="nav-profile" role="tabpanel" aria-labelledby="nav-profile-tab">
+              <div class="serviceconnt">
+                <div class="header card-header" id="doctors">Our Doctors<br>
+                  <div class="header-down"><small>Our doctors are specialized in their field and have more than 10 years
+                      of experiences.</small></div>
+                </div>
+                <div class="container ourdr-extradiv" style="margin-left: 10% !important;">
+                  <div class="row">
+                    <div class="col-lg-3 col-md-12 col-12 ourdr">
+                      <div class="card" style="width: 15rem;">
+                        <img class="card-img-top" src="../everyone/images/doctor.jpeg" alt="Card image cap">
+                        <div class="card-body">
+                          <p class="card-text">Some quick example text to build on the card title and make up the bulk
+                            of the card's
+                            content.</p>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-lg-3 col-md-12 col-12 ourdr">
+                      <div class="card" style="width: 15rem;">
+                        <img class="card-img-top" src="../everyone/images/doctor.jpeg" alt="Card image cap">
+                        <div class="card-body">
+                          <p class="card-text">Some quick example text to build on the card title and make up the bulk
+                            of the card's
+                            content.</p>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-lg-3 col-md-12 col-12 ourdr">
+                      <div class="card" style="width: 15rem;">
+                        <img class="card-img-top" src="../everyone/images/doctor.jpeg" alt="Card image cap">
+                        <div class="card-body">
+                          <p class="card-text">Some quick example text to build on the card title and make up the bulk
+                            of the card's
+                            content.</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="appt_form_doctor card-footer text-muted">
+                  Check More About Our Doctors.....
+                </div>
+                
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    function apptsubmit() {
+      alert("Form Submitted succesfully check please confirm timing!!");
+    }
+  </script>
+
+
+  <!-- Optional JavaScript -->
+  <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+    integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js"
+    integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js"
+    integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+    crossorigin="anonymous"></script>
+</body>
+
+</html>
